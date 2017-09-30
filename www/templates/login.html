@@ -1,0 +1,68 @@
+<ion-content class="has-header">
+
+  <form name="loginForm" ng-submit="vm.login()" validate>
+
+    <div class="list list-inset margin-01">
+
+      <div class="row">
+
+        <div class="col">
+
+          <div class="text-center">
+
+            <img class="Img-01" src="img/Logo_TV_2015.png">
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <label class="item item-input">
+        <input
+          type="email"
+          placeholder="Email"
+          name="email"
+          ng-model="vm.loginData.email"
+          ng-minlength="5"
+          ng-maxlength="30"
+          required
+        >
+
+      </label>
+
+      <div class="help-block" ng-messages="loginForm.email.$error" ng-if="loginForm.email.$touched">
+        <p ng-message="minlength">* Your name is too short.</p>
+        <p ng-message="maxlength">* Your name is too long.</p>
+        <p ng-message="required"> * Your name is required.</p>
+        <p ng-message="email"> * Your email is invalid</p>
+      </div>
+
+
+      <label class="item item-input">
+
+        <input type="password" placeholder="Password" name="password" ng-model="vm.loginData.password"  ng-minlength="5" ng-maxlength="12" required>
+
+      </label>
+
+      <div class="help-block" ng-messages="loginForm.password.$error" ng-if="loginForm.password.$touched">
+        <p ng-message="minlength">* Your name is too short.</p>
+        <p ng-message="maxlength">* Your name is too long.</p>
+        <p ng-message="required"> * Your name is required.</p>
+      </div>
+
+
+      <label>
+        <button type="submit" ng-disabled="loginForm.$invalid" class="button button-block button-balanced" >Sign In</button>
+        <!-- ui-sref="app.home" -->
+      </label>
+
+    </div>
+
+  </form>
+
+</ion-content>
+
+<ion-footer-bar align-title="center" class="bar-royal">
+  <a class="title" ui-sref="register">Register</a>
+</ion-footer-bar>

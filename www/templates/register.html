@@ -1,0 +1,83 @@
+<div class="bar bar-header">
+  <button ui-sref="login" class="button button-icon icon ion-chevron-left">&nbsp;&nbsp;Back</button>
+</div>
+
+<form name="registerForm" ng-submit="registerUserData()">
+  <ion-content class="margin-02">
+
+    <div class="textcenter">
+      <div>
+        <img class="imageset" ng-src="{{vm.Profile}}" alt="No Image">
+      </div>
+      <button class="button button-outline button-positive button-small buttonset-01" ng-click="vm.imageUpload()">
+        Upload Image
+      </button>
+      <!--<input class="text-center" type="file" accept="image/*"  name="profilePic" ng-model="vm.admin.profilePic" ng-src="picture" ngf-select="vm.uploadFiles($files)" multiple title="upload" resetOnClick="true">-->
+      <!--<div><span><img class="changestyle-a1" alt="No Image" ng-src="{{vm.profile}}"></span></div>-->
+    </div>
+
+    <div class="list">
+
+      <label class="item item-input item-floating-label border-01">
+        <span class="input-label">First Name</span>
+        <input type="text" placeholder="First Name" name="firstName" ng-model="vm.registerData.firstName"  ng-minlength="5" ng-maxlength="12" required>
+      </label>
+
+      <div class="help-block" ng-messages="registerForm.firstName.$error" ng-if="registerForm.firstName.$touched">
+        <p ng-message="minlength">* Your name is too short.</p>
+        <p ng-message="maxlength">* Your name is too long.</p>
+        <p ng-message="required"> * Your name is required.</p>
+      </div>
+
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Last Name</span>
+        <input type="text" placeholder="Last Name" name="lastName" ng-model="vm.registerData.lastName"  ng-minlength="5" ng-maxlength="12" required>
+      </label>
+
+      <div class="help-block" ng-messages="registerForm.lastName.$error" ng-if="registerForm.lastName.$touched">
+        <p ng-message="minlength">* Your name is too short.</p>
+        <p ng-message="maxlength">* Your name is too long.</p>
+        <p ng-message="required"> * Your name is required.</p>
+      </div>
+
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Email</span>
+        <input type="email" placeholder="Email" name="email" ng-model="vm.registerData.email" required>
+      </label>
+
+      <div class="help-block" ng-messages="registerForm.email.$error" ng-if="registerForm.email.$touched">
+        <p ng-message="required"> * Your name is required.</p>
+        <p ng-message="email"> * Your email is invalid</p>
+      </div>
+
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Password</span>
+        <input type="password" placeholder="Password" name="password" ng-model="vm.registerData.password"   ng-minlength="5" ng-maxlength="12" required>
+      </label>
+
+      <div class="help-block" ng-messages="registerForm.password.$error" ng-if="registerForm.password.$touched">
+        <p ng-message="minlength">* Your name is too short.</p>
+        <p ng-message="maxlength">* Your name is too long.</p>
+        <p ng-message="required"> * Your name is required.</p>
+      </div>
+
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Confirm Password</span>
+        <input type="password" placeholder="Confirm Password" name="confirmPassword" ng-model="confirmPassword" ng-pattern="vm.registerData.password" required>
+      </label>
+
+      <div class="help-block" ng-messages="registerForm.confirmPassword.$error" ng-if="registerForm.confirmPassword.$touched">
+        <p ng-message="required"> * Your name is required.</p>
+        <p ng-message="pattern"> * Password must match</p>
+
+      </div>
+
+    </div>
+
+  </ion-content>
+
+  <ion-footer-bar align-title="center" class="bar-royal">
+    <!-- <a class="title" type="submit" ng-disabled="registerForm.$invalid">Confirm</a> -->
+    <button type="submit" ng-disabled="registerForm.$invalid" class="button button-block button-royal buttonMargin-01 ">Confirm</button>
+  </ion-footer-bar>
+</form>

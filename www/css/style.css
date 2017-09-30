@@ -1,0 +1,49 @@
+.margin-01 {
+  margin-top: 100px;
+}
+
+.Img-01 {
+  width: 30%;
+}
+
+.margin-02 {
+  margin-top: 100px;
+}
+
+.border-01 {
+  border-top: 0px;
+}
+
+.imgwidth-01 {
+  width: 46%;
+}
+
+.sizeOfFont-01 {
+  font-size: 21px;
+}
+
+.margin-03 {
+  margin-top: 6%;
+}
+
+.bordertop-01 {
+  border-top: 0px !important;
+}
+
+.buttonMargin-01 {
+  margin-top: 0px !important;
+  font-size: 18px !important;
+}
+.title{
+  text-align: center !important;
+}
+.textcenter{
+  text-align: center !important;
+}
+.buttonset-01{
+  margin-top: 43px;
+}
+.imageset{
+  width: 132px;
+  height: 132px;
+}
