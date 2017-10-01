@@ -51,7 +51,8 @@ simpleApp.config(function($stateProvider, $urlRouterProvider) {
     .state('app', {
       url: '/app',
       abstract: true,
-      templateUrl: 'templates/shell.html'
+      templateUrl: 'templates/shell.html',
+      controller: 'shellCrtl as vm'
     })
 
     .state('app.home', {

@@ -1,20 +1,30 @@
 simpleApp.factory('authFactory', function(dataService) {
 
 
-    // Global varible
+  // Global varible
+  var filterValue;
+
+  return {
+
+    // initalize Funcrion
+    testFunction: testFunction,
+    setFilterValue : setFilterValue,
+    getFilterValue : getFilterValue
 
 
-    return {
+  };
 
-        // initalize Funcrion
-        testFunction: testFunction,
+  // test function
+  function testFunction() {
+    console.info('This is a test function');
+  }
 
+  function setFilterValue(items) {
+    filterValue = items;
+  }
 
-    };
-
-    // test function
-    function testFunction() {
-        console.info('This is a test function');
-    }
+  function getFilterValue() {
+    return filterValue;
+  }
 
 });

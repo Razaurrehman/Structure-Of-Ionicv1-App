@@ -65,55 +65,6 @@ simpleApp.controller('registerCrtl', function($scope,$cordovaCamera,Upload, $roo
     }, false);
 
   }
-
-
-  // // cloudnary Image Upload
-  // var cl = cloudinary.Cloudinary.new();
-  // cl.config("cloud_name", "doiqskci6");
-  // // cl.config( "api_key", "183249429629613");
-  // cl.config("upload_preset", "a8rf43or");
-  //
-  // // Get All upload image
-  // function uploadFiles(x) {
-  //   vm.files = x;
-  //   getPicUrl();
-  // };
-  //
-  // // return image url From Cloudnary Api's
-  // function getPicUrl() {
-  //   var deferred = $q.defer();
-  //   var upload;
-  //   if (!vm.files) return;
-  //   angular.forEach(vm.files, function(file) {
-  //     if (file && !file.$error) {
-  //       file.upload = Upload.upload({
-  //         url: "https://api.cloudinary.com/v1_1/" + cl.config().cloud_name + "/upload",
-  //         data: {
-  //           upload_preset: cl.config().upload_preset,
-  //           tags: 'myphotoalbum',
-  //           context: 'photo=' + vm.title,
-  //           file: file
-  //         }
-  //       }).progress(function(e) {
-  //         file.progress = Math.round((e.loaded * 100.0) / e.total);
-  //         file.status = "Uploading... " + file.progress + "%";
-  //         vm.picStatus = file.status
-  //       }).success(function(data, status, headers, config) {
-  //         $rootScope.photos = $rootScope.photos || [];
-  //         data.context = { custom: { photo: vm.title } };
-  //         file.result = data;
-  //         $rootScope.photos.push(data);
-  //         vm.profile = data.url;
-  //         vm.profileInformation.profilePic = vm.profile;
-  //         // editProifle();
-  //       }).error(function(data, status, headers, config) {
-  //         file.result = data;
-  //       });
-  //     }
-  //   });
-  //   return deferred.promise;
-  // };
-
-
+  
 
 });
