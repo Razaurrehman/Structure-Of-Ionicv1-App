@@ -14,6 +14,7 @@
     "ng-file-upload-shim": "^12.2.13",
     "cloudinary_ng": "1.x",
     "angular-cloudinary": "^1.2.4",
-    "ion-floating-menu": "^1.0.5"
+    "ion-floating-menu": "^1.0.5",
+    "angular-google-analytics": "^1.1.9"
   }
 }

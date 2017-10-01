@@ -15,6 +15,7 @@ var simpleApp = angular.module('simpleApp', [
   'ngCordova',
   'cloudinary',
   'ngFileUpload',
+  'angular-google-analytics'
 
 ])
 
@@ -34,7 +35,10 @@ simpleApp.run(function($ionicPlatform) {
   });
 })
 
-simpleApp.config(function($stateProvider, $urlRouterProvider) {
+
+
+simpleApp.config(function($stateProvider, $urlRouterProvider,AnalyticsProvider) {
+  AnalyticsProvider.setAccount('UA-103955165-1');
   $stateProvider
 
     .state('login', {

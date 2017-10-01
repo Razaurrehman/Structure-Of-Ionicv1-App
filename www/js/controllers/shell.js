@@ -1,4 +1,4 @@
-simpleApp.controller('shellCrtl', function($scope, $state,$ionicFilterBar,authFactory) {
+simpleApp.controller('shellCrtl', function($scope, $state,$ionicFilterBar,authFactory,Analytics) {
 
   // global Variable
   var vm = this;
@@ -18,6 +18,7 @@ simpleApp.controller('shellCrtl', function($scope, $state,$ionicFilterBar,authFa
   // call fnction
   testfunction();
   BeforeFilter();
+  Analytics.trackPage('shellView');
 
   // test function
   function testfunction() {
